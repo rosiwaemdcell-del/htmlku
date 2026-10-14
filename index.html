@@ -249,14 +249,46 @@
   border-radius: 25px;
  }
 
+ .swal2-popup.popup-foto-modal {
+  width: 85% !important;
+  max-width: 320px !important;
+  padding: 16px 14px !important;
+  border-radius: 24px !important;
+  box-sizing: border-box !important;
+ }
+
+ .swal2-popup.popup-foto-modal .swal2-title {
+  padding: 5px 10px 0 10px !important;
+  font-size: 18px !important;
+ }
+
  .swal2-image.popup-foto {
   width: auto !important;
   height: auto !important;
-  max-width: 260px;
-  max-height: 65vh;
+  max-width: 220px !important;
+  max-height: 48vh !important;
+  aspect-ratio: 899 / 1599;
   object-fit: contain;
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  margin: 12px auto 8px auto !important;
+ }
+
+ @media (min-width: 600px) and (min-height: 700px) {
+  .swal2-popup.popup-foto-modal {
+   max-width: 360px !important;
+  }
+  .swal2-image.popup-foto {
+   max-width: 250px !important;
+   max-height: 55vh !important;
+  }
+ }
+
+ @media (max-height: 600px) {
+  .swal2-image.popup-foto {
+   max-height: 40vh !important;
+   max-width: 170px !important;
+  }
  }
 </style>
 
@@ -465,8 +497,8 @@
    await swals.fire({
     title: '><',
     imageUrl: 'img/Foto.jpeg',
-    imageWidth: 260,
     customClass: {
+     popup: 'popup-foto-modal',
      image: 'popup-foto'
     }
    });
