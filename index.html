@@ -248,6 +248,16 @@
   border: .7px solid #000;
   border-radius: 25px;
  }
+
+ .swal2-image.popup-foto {
+  width: auto !important;
+  height: auto !important;
+  max-width: 260px;
+  max-height: 65vh;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+ }
 </style>
 
 <body>
@@ -454,7 +464,11 @@
   async function popup() {
    await swals.fire({
     title: '><',
-    imageUrl: 'img/Foto.jpeg', imageWidth: 200, imageHeight: 200,
+    imageUrl: 'img/Foto.jpeg',
+    imageWidth: 260,
+    customClass: {
+     image: 'popup-foto'
+    }
    });
   }
  </script>
