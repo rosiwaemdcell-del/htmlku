@@ -251,12 +251,12 @@
 </style>
 
 <body>
- <div id="bodyblur"><img src="/img/Background.jpg" width="100%" height="100%" />
+ <div id="bodyblur"><img src="img/Background.jpg" width="100%" height="100%" />
  </div>
 
  <!-- Isi Konten -->
  <div id='Content'>
-  <div class="image"><img src="/img/gumush.gif" width="130px" height="130px" /></div>
+  <div class="image"><img src="img/gumush.gif" width="130px" height="130px" /></div>
   <!--<div id="sp1"></div>-->
   <div>
    <blockquote>
@@ -320,7 +320,7 @@
 
  <script type="text/javascript">
   function play() {
-   var audio = new Audio('/Audio/WhatsApp Audio 2026-10-10 at 12.35.28.mpeg'); audio.play();
+   var audio = new Audio('Audio/WhatsApp Audio 2026-10-10 at 12.35.28.mpeg'); audio.play();
   }
 
   const swals = Swal.mixin({ allowOutsideClick: false, cancelButtonColor: '#FF0040', });
@@ -329,7 +329,7 @@
 
   async function mulaitanya() {
    var { isConfirmed: tanyawal } = await swals.fire({
-    title: `Hai kamu!`, text: `Mau isi nama kamu dulu atau langsung aja?`, imageUrl: '/img/gumush.gif', imageWidth: 120, imageHeight: 120, confirmButtonText: 'Isi Nama', cancelButtonText: 'Langsung Aja', allowOutsideClick: false, showCancelButton: true,
+    title: `Hai kamu!`, text: `Mau isi nama kamu dulu atau langsung aja?`, imageUrl: 'img/gumush.gif', imageWidth: 120, imageHeight: 120, confirmButtonText: 'Isi Nama', cancelButtonText: 'Langsung Aja', allowOutsideClick: false, showCancelButton: true,
    }); if (tanyawal) { mulai(); play(); } else { window.nama = 'Kamu'; kuis(); play(); }
   }
 
@@ -337,7 +337,7 @@
    var { value: nama } = await swals.fire({
     title: 'Masukin nama kamu',
     input: 'text',
-    imageUrl: '/img/ngumpet.gif', imageWidth: 120, imageHeight: 120,
+    imageUrl: 'img/ngumpet.gif', imageWidth: 120, imageHeight: 120,
     allowOutsideClick: false,
     showCancelButton: false,
    });
@@ -345,7 +345,7 @@
     window.nama = nama;
     kuis();
    } else {
-    await swals.fire({ title: 'Ups!', text: 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!', imageUrl: '/img/pusn.gif', imageWidth: 120, imageHeight: 120 });
+    await swals.fire({ title: 'Ups!', text: 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!', imageUrl: 'img/pusn.gif', imageWidth: 120, imageHeight: 120 });
     mulai();
    }
   }
@@ -383,9 +383,9 @@
   teksgantiB = "Oke, memilih Ungu!";
   teksgantiBB = "Sama aja sih sebenernya, cuma beda warna doang" + emotketawa;
 
-  gambar1 = "/img/mndkat.gif";
-  gambar2 = "/img/gumush.gif";
-  gambar3 = "/img/nimasi.gif";
+  gambar1 = "img/mndkat.gif";
+  gambar2 = "img/gumush.gif";
+  gambar3 = "img/nimasi.gif";
 
   async function pilihwarna() {
    var { isConfirmed: warna } = await swals.fire({
@@ -404,7 +404,7 @@
     var { isConfirmed: warna2 } = await swals.fire({
      title: nama + ' ' + teksbawahAA,
      text: '' + teksbawahAAA, showCancelButton: true,
-     imageUrl: '/img/g5.gif', imageWidth: 120, imageHeight: 120,
+     imageUrl: 'img/g5.gif', imageWidth: 120, imageHeight: 120,
      confirmButtonText: '' + vyakin,
      cancelButtonText: '' + vganti,
     });
@@ -412,7 +412,7 @@
      await swals.fire({
       title: '' + teksatasoke,
       text: '' + teksakhiroke,
-      imageUrl: '/img/ngumpet.gif', imageWidth: 120, imageHeight: 120,
+      imageUrl: 'img/ngumpet.gif', imageWidth: 120, imageHeight: 120,
      });
      showDiv();
     } else {
@@ -433,7 +433,7 @@
     var { isConfirmed: warna2 } = await swals.fire({
      title: nama + ' ' + teksbawahBB,
      text: '' + teksbawahBBB, showCancelButton: true,
-     imageUrl: '/img/g5.gif', imageWidth: 120, imageHeight: 120,
+     imageUrl: 'img/g5.gif', imageWidth: 120, imageHeight: 120,
      confirmButtonText: '' + vganti,
      cancelButtonText: '' + vyakin,
     });
@@ -448,7 +448,7 @@
      await swals.fire({
       title: '' + teksatasoke,
       text: '' + teksakhiroke,
-      imageUrl: '/img/ngumpet.gif', imageWidth: 120, imageHeight: 120,
+      imageUrl: 'img/ngumpet.gif', imageWidth: 120, imageHeight: 120,
      });
      showDiv();
     }
