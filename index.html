@@ -11,8 +11,6 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
- <link href="https://ayang.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" />
- <script src="https://ayang.likeadream.repl.co/script.js"></script>
 </head>
 <style>
  body {
@@ -62,6 +60,9 @@
  }
 
  #bodyblur img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   animation-name: jj;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -317,7 +318,7 @@
 
  <script type="text/javascript">
   function play() {
-   var audio = new Audio('Audio/WhatsApp Audio 2026-10-10 at 12.35.28.mpeg'); audio.play();
+   var audio = new Audio(encodeURI('Audio/WhatsApp Audio 2026-10-10 at 12.35.28.mpeg')); audio.play();
   }
 
   const swals = Swal.mixin({ allowOutsideClick: false, cancelButtonColor: '#FF0040', });
@@ -453,7 +454,7 @@
   async function popup() {
    await swals.fire({
     title: '><',
-    imageUrl: 'https://i.postimg.cc/QMryKNTR/uwu.gif', imageWidth: 300, imageHeight: 300,
+    imageUrl: 'img/gumush.gif', imageWidth: 200, imageHeight: 200,
    });
   }
  </script>
